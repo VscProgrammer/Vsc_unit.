@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+    <!-- Iconos google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/estilos--actividades.css">
+    <link rel="stylesheet" href="../css/cintillos.css">
+    <!-- JS -->
+    <script defer src="../js/respuestas.js"></script>
+    <script defer src="../js/actividad.js"></script>
+    <script defer src="../js/modal.js"></script>
+    <script defer src="../js/draggable_2.js"></script>
+    <script defer src="../js/SortableUnidadIII.js"></script>
+</head>
+<body>
+
+    <div class="contenedor--intro">
+        <div class="img--back"></div>
+        <div class="texto">
+            <h1>Unidad III: Ética de las organizaciones</h1>
+            <p>&nbsp;</p>
+            <p>A continuación se exponen algunas actividades formativas con la finalidad de medir el conocimiento previo la lectura de las unidades de la asignatura, por lo cual se invita a realizar la práctica formativa de las siguientes actividades.</p>
+            <p>&nbsp;</p>
+            <p>Núm. de Actividades: 2</p>
+            <p>&nbsp;</p>
+            <button class="btn--comenzar" onClick="document.getElementById('start').scrollIntoView();">Comenzar</button>
+        </div>
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="contenedor--principal">
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <div class="contenedor">
+            <div class="cintillo" id="start">
+                <div class="izquierda">
+                    <h1>Recursos</h1>
+                </div>
+                <div class="derecha multimedia">
+                    <!-- Fondo imagen -->
+                    <img src="../img/Unidad_III.jpg" class="multimedia" alt="">
+                </div>
+            </div>
+
+            <div class="recursos">
+                <div class="contenido">
+                    <span><a href="http://www.slideshare.net/Lilianamoranrivera/tica-en-las-organizaciones-presentation"
+                            target="_blank">
+                            > Ética de las organizaciones
+                        </a></span>
+                    <span><a href="http://www.slideshare.net/katy3/teoria-del-desarrollo-moral-de-kohlberg"
+                            target="_blank">
+                            > Desarrollo moral de Kohlberg
+                        </a></span>
+                    <span><a href="http://www.ateismopositivo.com/NIVELES_MORALES_KOHLBERG.pdf"
+                            target="_blank">
+                            > Etapas del desarrollo moral según Kohlberg
+                        </a></span>
+                    <iframe src="http://www.youtube.com/embed/9rwFOxc84U4" frameborder="0"></iframe>
+                    <iframe src="http://www.youtube.com/embed/0VEfUcy0qOA" frameborder="0"></iframe>
+                    <iframe src="http://www.youtube.com/embed/rdXK_c-yFxk" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+        <div class="seleccione--actividad" id="start">
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 1 - La ética de los negocios no se debe tomar en cuenta  los aspectos: sistemático, corporativo e individual</strong></span>
+            </div>
+    
+            <div class="contenido--actividad" id="4">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(4)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+        <div class="seleccione--actividad"  >
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 2 - El nivel sistemático comprende las preguntas acerca de los sistemas políticos, económicos, legal y otros dentro de los cuales operan los negocios</strong></span>
+            </div>
+        
+            <div class="contenido--actividad" id="5">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(5)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+        <!-- SORTABLE - PARA MOVER LOS OBJETOS -->
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+        <!--Modal-->
+        <div class="modal">
+            <div class="modal_content animate__animated">
+                <header class="modal_header">
+                    <span class="titulo_modal">
+    
+                        <!-- TITULO MODAL -->
+                        
+                    </span>
+                    <button class="cerrarBtn_modal"><span class="material-icons-outlined">cancel</span></button>
+                </header>
+                <div class="modal_helpText">
+    
+                    <!--DESCRIPCIÓN MODAL-->
+    
+                </div>
+            </div>
+        </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+    <!-- Iconos google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/estilos--actividades.css">
+    <link rel="stylesheet" href="../css/cintillos.css">
+    <!-- JS -->
+    <script defer src="../js/respuestas.js"></script>
+    <script defer src="../js/actividad.js"></script>
+    <script defer src="../js/modal.js"></script>
+    <script defer src="../js/draggable_2.js"></script>
+    <script defer src="../js/SortableUnidadII.js"></script>
+</head>
+<body>
+
+    <div class="contenedor--intro">
+        <div class="img--back"></div>
+        <div class="texto">
+            <h1>Unidad IV: Ética en el ejercicio de la profesión del licenciado en
+                administración de recursos humanos y relaciones
+                industriales</h1>
+            <p>&nbsp;</p>
+            <p>A continuación se exponen algunas actividades formativas con la finalidad de medir el conocimiento previo la lectura de las unidades de la asignatura, por lo cual se invita a realizar la práctica formativa de las siguientes actividades.</p>
+            <p>&nbsp;</p>
+            <p>Núm. de Actividades: 2</p>
+            <p>&nbsp;</p>
+            <button class="btn--comenzar" onClick="document.getElementById('start').scrollIntoView();">Comenzar</button>
+        </div>
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="contenedor--principal">
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <div class="contenedor">
+            <div class="cintillo" id="start">
+                <div class="izquierda">
+                    <h1>Recursos</h1>
+                </div>
+                <div class="derecha multimedia">
+                    <!-- Fondo imagen -->
+                    <img src="../img/Unidad_IV.jpg" class="multimedia" alt="">
+                </div>
+            </div>
+
+            <div class="recursos">
+                <div class="contenido">
+                    <span><a href="http://es.scribd.com/doc/33686940/Relaciones-Industriales-Definicion-y-un-poco-de-historia"
+                            target="_blank">
+                            > Relaciones industriales y reseña histórica
+                        </a></span>
+                    <span><a href="http://definicion.de/relaciones-industriales/"
+                            target="_blank">
+                            > Relaciones industriales
+                        </a></span>
+                    <span><a href=" http://www.slideshare.net/elheroereal777/ley-del-ejercicio-de-la-profesin-de-licenciados-en-relaciones-industriales-y-recursos-humanos"
+                            target="_blank">
+                            > Ley del ejercicio
+                        </a></span>
+                    <span><a href="http://www.monografias.com/trabajos12/cdgrelac/cdgrelac.shtml"
+                            target="_blank">
+                            > Código de la ética relacionista industrial
+                        </a></span>     
+                </div>
+            </div>
+        </div>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+        <div class="seleccione--actividad" id="start">
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 1 - Las empresas han venido dando mayor respaldo a los profesionales en Relaciones Industriales y Recursos Humanos para dar prestigio a sus acciones</strong></span>
+            </div>
+        
+            <div class="contenido--actividad" id="6">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(6)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+        <div class="seleccione--actividad"  >
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 2 - Los empresarios necesitan especialistas que posean las capacidades para contratar personal calificado para  cada puesto.</strong></span>
+            </div>
+        
+            <div class="contenido--actividad" id="7">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(7)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+        <!-- SORTABLE - PARA MOVER LOS OBJETOS -->
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+        <!--Modal-->
+        <div class="modal">
+            <div class="modal_content animate__animated">
+                <header class="modal_header">
+                    <span class="titulo_modal">
+    
+                        <!-- TITULO MODAL -->
+                        
+                    </span>
+                    <button class="cerrarBtn_modal"><span class="material-icons-outlined">cancel</span></button>
+                </header>
+                <div class="modal_helpText">
+    
+                    <!--DESCRIPCIÓN MODAL-->
+    
+                </div>
+            </div>
+        </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>

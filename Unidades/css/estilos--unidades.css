@@ -1,0 +1,471 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* ---- Descomentar solo para debugging ---- */
+  /* outline: 2px solid wheat !important; */
+  /* ----------------------------------------- */
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Para ajustar los colores de la materia cambiar solo la variable primary_color */
+/* ----------------------------------------------------------------------------- */
+
+:root  {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Oswald';
+  --primary_color: #eb8fdc;
+}
+
+html, body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans_SemiCondensed-Regular.ttf');
+  src: url('../fonts/OpenSans_Condensed-Regular.ttf');
+}
+
+h1, h2, h3, h4, p {
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  text-align: center;
+} 
+
+/* +++ INSTRUCCIONES DEL TELEFONO +++ */
+
+.instruciones--telefonos {
+  display: none;
+  color: var(--primary_color);
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  right: 0px;
+  font-size: 20px;
+}
+
+.titulo_unidades {
+  margin: 0 1.300rem;
+  padding: 2rem 1rem;
+  box-shadow: var(--primary_color) 0px 0px 0px 3px inset, white 12px 10px 0px -3px, var(--primary_color) 12px 10px;
+}
+
+.prueba {
+  position: absolute;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+
+.cards {
+  margin-top: 0;
+  display: grid;
+  grid-gap: 1.5rem;
+  padding: 0.200rem 2rem;
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto;
+  font-family: var(--font-sans);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card { 
+  display: flex;
+  align-items:  stretch;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card:nth-child(1) {
+  background-image: url("/img/Unidad_I.jpg");
+}
+.card:nth-child(2) {
+  background-image: url("/img/Unidad_II.jpg");
+}
+.card:nth-child(3) {
+  background-image: url("/img/Unidad_III.jpg");
+}
+
+
+.card > img {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+  }
+
+  .content {
+    box-shadow: 2.5rem 3.75rem 3rem -3.500rem var(--primary_color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items:  center;
+    justify-content:  space-between;
+    padding: 0.350rem 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary_color);
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+    transform: translateY(calc(100% - 4rem));
+  }
+  
+  .content > h2 {
+    font-size: 2rem;
+  }
+
+  .content > p {
+    overflow: hidden;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  
+  /* unidades titulo */
+  
+  .unidades_titulo {
+    text-align: left;
+  }
+  
+  .unidades_titulo > p {
+    font-size: 26px;
+  }
+  
+  .botones {
+    display: grid;
+    grid-template-columns:  repeat(1, 1fr);
+    gap: 0.500rem;
+    margin-bottom: 0.600rem;
+  }
+  
+  .btn--unidad {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding:  0.700rem 1.600rem;
+    font-weight: bold;
+    font-size: 0.800rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+  }
+
+  .material{
+    visibility: hidden;
+  }
+
+  .btn--unidad--solo {
+    grid-template-columns:  repeat(1, 1fr);
+  }
+  
+  .btn--unidad:hover {
+    background-color:  #1b2631;
+  }
+  
+  .btn--unidad > p {
+    font-weight: normal;
+  }
+  
+  .btn--unidad > span{
+    font-size: 2rem;
+  }
+  
+  .card:hover > .content,
+    .card:hover > .content > p  {
+      
+      transform: translateY(0px);
+  }
+  
+  .oculto {
+    display: none;
+  }
+  
+  .card--muestra {
+    display: block;
+    animation: efecto 1s 0s alternate ;
+  }
+  
+  @keyframes efecto {
+    25% {
+      transform: scale(1.15);
+      transform: translateX(500px);
+    }
+  
+    50% {
+      transform: scale(1.02);
+    }
+  }
+  
+  .btn--movil {
+    text-align: center;
+  }
+  
+  .btn--anterior , .btn--siguiente {
+    margin-top: 1rem;
+    background-color: transparent;
+    transition: .3s ease-in-out all;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+  }
+  
+  .btn--siguiente:hover {
+    background-color: transparent;
+    transform: translateX(6px);
+    transition: .3s ease-in-out all;
+  }
+  
+  .btn--anterior:hover {
+    background-color: transparent;
+    transform: translateX(-6px);
+    transition: .3s ease-in-out all;
+  }
+  
+  .btn--anterior > span {
+    transform: rotate(180deg);
+  }
+  
+  .btn--anterior > span , .btn--siguiente > span {
+    font-size: 5rem;
+    color: #1b2631;
+  }
+
+.btn--movil {
+  text-align: center;
+}
+
+.btn--anterior , .btn--siguiente {
+  margin-top: 1rem;
+  background-color: transparent;
+  transition: .3s ease-in-out all;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+.btn--siguiente:hover {
+  background-color: transparent;
+  transform: translateX(6px);
+  transition: .3s ease-in-out all;
+}
+
+.btn--anterior:hover {
+  background-color: transparent;
+  transform: translateX(-6px);
+  transition: .3s ease-in-out all;
+}
+
+.btn--anterior > span {
+  transform: rotate(180deg);
+}
+
+.btn--anterior > span , .btn--siguiente > span {
+  font-size: 5rem;
+  color: #1b2631;
+}
+
+/* -------- */
+/* Laptops */
+/* ------ */
+
+@media screen and (max-width: 1000px) {
+  .botones {
+    gap: 0.300rem;
+  }
+  .btn--unidad {
+    padding:  0.500rem 0.500rem;
+    font-size: 12px;
+  }
+}
+
+/* -------- */
+/* Tablets */
+/* ------ */
+/* 
+@media screen and (max-width: 750px) {
+  .content {
+    transform: translateY(0px);
+  }
+  
+  .content > p {
+    font-size: 17px;
+  }
+
+  .botones {
+    gap: 0.500rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 350px;
+  }
+
+  .card:nth-child(5) {
+    grid-column: 1 / 3;
+  }
+}
+ */
+/* ---------- */
+/* Telefonos */
+/* -------- */
+
+@media (max-width: 750px) {
+
+  body {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .instruciones--telefonos {
+    display: block;
+  }
+
+  .cards {
+    padding: 0 0.700rem;
+    grid-template-columns:  repeat(1, 1fr);
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  .btn--movil {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+/* ---------------------------  */
+/* Para pantallas muy pequeñas */
+/* --------------------------- */
+
+@media (max-width: 270px) {
+
+  .content > h2 {
+    font-size: 6vw;
+  }
+
+  .unidades_titulo > p {
+    font-size: 5vw;
+  }
+
+  .btn--unidad  {
+    font-size: 4vw;
+  }
+
+  .btn--unidad > span {
+    font-size: 8vw;
+  }
+
+  .titulo_unidades {
+    font-size: 23px;
+  }
+} 
+
+.carousel {
+  display: none;
+}
+
+
+@media (max-width: 750px) {
+
+  .cards{
+   display: none
+  }
+
+  .content {
+    transform: translateY(0px);
+  }
+
+
+  .carousel {
+    display: flex;
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    top: 40px;
+  }
+
+  .carousel-inner{
+    /* background-color: #172867; */
+    background-color: #eb8fdc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .popdown{
+    display: grid;
+    font-weight: 900;
+    justify-content: center;
+    justify-items: center;
+  
+    color: #FFFFFF;
+    user-select: none;
+  }
+
+  .carousel-item{
+    /* background-color: #172867; */
+    background-color: #eb8fdc;
+  }
+} 
+
+
+
+
+
+
+

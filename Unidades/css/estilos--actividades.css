@@ -1,0 +1,493 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Para ajustar los colores de la materia cambiar solo la variable primary_color */
+/* ----------------------------------------------------------------------------- */
+
+:root {
+    --primary_color: #6f0000;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #1b1c1e;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans_SemiCondensed-Regular.ttf');
+    src: url('../fonts/OpenSans_Condensed-Regular.ttf');
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald';
+    color: white;
+    text-transform: uppercase;
+}
+
+a:link, a:visited {
+    color: white;
+    -webkit-text-stroke: 0px;
+    text-decoration: none;
+  }
+
+a:hover{
+    color: grey;
+}
+
+iframe{
+    align-self: center;
+}
+
+p, li, ul, ol, span, strong {
+    font-family: 'Open Sans';
+}
+
+.contenedor--principal {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 2rem;
+}
+
+.recursos {
+    background-color: #6f0000;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px 0 0 5px;
+}
+
+.recursos > .titulo {
+    display: flex;
+    flex-direction: row;
+    background-color: #4f0000;
+    flex-basis: 70%;
+}
+
+.titulo > h2 {
+    flex: auto;
+}
+
+.titulo > input{
+    width: 2rem;
+}
+
+.contenido { 
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;   
+}
+
+.contenido > span {
+    font-size: larger;
+}
+
+
+/*
++++++++++++++
+introducción
++++++++++++++
+*/
+
+.contenedor--intro {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img--back {
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../img/img_back.jpg");
+}
+
+.texto {
+    padding: 1rem;
+    max-width: 800px;
+}
+
+.texto > p {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    color: white;
+    font-size: 22px;
+}
+
+.btn--comenzar {
+    border: none;
+    font-size: 22px;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: var(--primary_color);
+    transition: 0.25s ease-in-out all;
+}
+
+.btn--comenzar:hover {
+    cursor: pointer;
+    transform: translateY(-6px);
+    transition: 0.25s ease-in-out all;
+}
+
+/* ++++++ ACTIVIDADES: SELECCIONE UNA CORRECTA */
+
+.seleccione--actividad {
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.pregunta--actividad {
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--primary_color);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+
+.contenido--actividad {
+    padding: 1rem;
+}
+
+.respuestas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.respuestas > span {
+	margin-right: 1rem;
+    font-size: 18px;
+}
+
+.respuestas:nth-of-type(1),
+.respuestas:nth-of-type(2) {
+    margin-bottom: 1rem;
+}
+
+.respuestas:hover{
+    cursor: pointer;
+    background-color: var(--primary_color);
+    color: white;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.verificar--actividad {
+    padding: 1rem;
+}
+
+.btn--actividad {
+    padding: 0.700rem 2rem;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color:  var(--primary_color);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn---verificar {
+    padding: 0.780rem 2rem;
+}
+
+.btn---reset {
+    background-color: transparent;
+    border: 2px solid #f77100;
+    color: black;
+}
+
+.btn--actividad:hover {
+    transform: translateY(-6px);
+    transition: 0.25s ease-in-out all;
+}
+
+.oculto {
+    display: none;
+}
+
+/*
++++++++++++++
+ACTIVIDAD -- Mover y arrastrar
++++++++++++++
+*/
+
+
+.contenedor-actividad {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.pregunta-actividad {
+
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--primary_color);
+    padding: 1rem;
+    color: white;
+
+}
+
+.seccion-draggable-verifica {
+
+    padding: 0 2rem 0rem 2rem;
+    display: flex;
+
+}
+
+.items {
+    margin-inline: auto;
+}
+
+.items-draggable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    padding: 0.625rem 1rem;
+    margin-block: 1rem;
+    margin-inline: auto;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: move;
+
+}
+
+.img--icon {
+    width: 50%;
+    height: auto;
+}
+
+.img--icon2 {
+    width: 80%;
+    height: auto;
+}
+
+.underline {
+    border-bottom: 2px solid white;
+    color: var(--primary_color);
+}
+
+/*
++++++++++++++
+Respuestas correctas o incorrectas
++++++++++++++
+*/
+
+.correct {
+    background-color:  #2ecc71;
+    color: white;
+}
+
+.incorrect {
+    background-color: #e74c3c;
+    color: white;
+}
+
+
+/*
++++++++++++++
+Btn check
++++++++++++++
+*/
+
+.casilla-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.btn-draggable  {
+    padding: 0.700rem 2rem;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color:  var(--primary_color);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn-check:hover {
+    cursor: pointer;
+    transform: translateY(-6px);
+    transition: 0.25s ease-in-out all;
+}
+
+/*
++++++++++++++
+Actividad Formativa con 2 columnas
++++++++++++++
+*/
+
+.contenedor-actividad--col {
+    max-width: none;
+}
+
+.columnas {
+    display: flex;
+    width: 100%;
+}
+
+.columna:nth-of-type(1),
+.columna:nth-of-type(2) {
+        width: 50%;
+    }
+
+.items--a3 {
+    min-height: 320px;
+    margin-top: 5px;
+    margin-inline: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+.select {
+    transform: scale(1.08) rotate(3deg);
+    border: 2px dashed black;
+}
+
+.items--mover {
+    width: 60%;
+}
+
+.items--elementos {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr); 
+    gap: 10px;
+}
+
+.sortable-ghost {
+    box-shadow: 8px 10px 30px -7px var(--primary_color);
+}
+
+.columna {
+    width: 40%;
+}
+
+.elementos--verifica {
+    display: flex;
+    width: 100%;
+}
+
+.titulo_d {
+    width: 100%;
+    background-color: var(--primary_color);
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+}
+
+/* Imagen actividad */
+
+.contenedor--imagenFormativa {
+    margin: 0 auto;
+    max-width: 1000px;
+    border-radius: 5px;
+}
+
+.instrucciones {
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    padding: 1rem;
+    background-color: #68316a;
+}
+
+
+.cuerpo--actividad {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.cuerpo--actividad > img {
+    border-radius: 0px 0px 5px 5px;
+}
+
+/*
++++++++++++++
+media queries
++++++++++++++
+*/
+
+@media(max-width: 550px) {
+
+    .contenedor--principal {
+        margin: 1rem;
+    }
+
+    .contenedor--intro {
+        padding: 0 2rem;
+    }
+
+}
+
+/* -------------------- */
+/* Tablets y telefonos */
+/* ------------------ */
+
+@media(max-width: 700px) {
+
+    .elementos--verifica {
+        display: flex;
+        width: 100%;
+    }
+    
+    .columna:nth-of-type(1),
+    .columna:nth-of-type(2) {
+        width: 50%;
+    }
+    
+    .columnas {
+        flex-direction: column;
+    }
+    .items--mover {
+        width: 100%;
+    }
+    
+    .items-draggable {
+        font-size: 3.4vw;
+    }
+}

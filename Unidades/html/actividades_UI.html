@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+    <!-- Iconos google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/estilos--actividades.css">
+    <link rel="stylesheet" href="../css/cintillos.css">
+    <!-- JS -->
+    <script defer src="../js/codigo--actividades.js"></script>
+    <script defer src="../js/respuestas.js"></script>
+    <script defer src="../js/actividad.js"></script>
+    <script defer src="../js/modal.js"></script>
+    <script defer src="../js/draggable_2.js"></script>
+</head>
+<body>
+
+    <div class="contenedor--intro">
+        <div class="img--back"></div>
+        <div class="texto">
+            <h1>Unidad I: Ética</h1>
+            <p>&nbsp;</p>
+            <p>A continuación se exponen algunas actividades formativas con la finalidad de medir el conocimiento previo la lectura de las unidades de la asignatura, por lo cual se invita a realizar la práctica formativa de las siguientes actividades.</p>
+            <p>&nbsp;</p>
+            <p>Núm. de Actividades: 2</p>
+            <p>&nbsp;</p>
+            <button class="btn--comenzar" onClick="document.getElementById('start').scrollIntoView();">Comenzar</button>
+        </div>
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="contenedor--principal">
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <div class="contenedor">
+            <div class="cintillo" id="start">
+                <div class="izquierda">
+                    <h1>Recursos</h1>
+                </div>
+                <div class="derecha multimedia">
+                    <!-- Fondo imagen -->
+                    <img src="../img/Unidad_I.jpg" class="multimedia" alt="">
+                </div>
+            </div>
+
+            <div class="recursos">
+                <div class="contenido">
+                    <span><a href="https://issuu.com/kryskarol/docs/portafolio__tica_de_la_profesi_n"
+                            target="_blank">
+                            > Revista Ética
+                        </a></span>
+                    <span><a href="http://books.google.co.ve/books?id=XdWhSNIeXVoC&printsec=frontcover&dq=DEFINICI%C3%93N+Y+DESCRIPCI%C3%93N+DE+LA+%C3%89TICA&hl=es&sa=X&ei=co3VUcaND8jpigLEhIHYBQ&ved=0CD8Q6AEwBDgU#v=onepage&q=DEFINICI%C3%93N%20Y%20DESCRIPCI%C3%93N%20DE%20LA%20%C3%89TICA&f=false"
+                            target="_blank">
+                            > Libro Ética
+                        </a></span>
+                    <span><a href="http://lazaroreyesgonzalez.wordpress.com/2011/11/07/relacion-de-la-etica-con-las-demas-ciencias/" target="_blank">
+                            > Relación de la ética con las demás ciencias
+                        </a></span>
+                    <iframe src="http://www.youtube.com/embed/DKrgTmL4BMI" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+        <div class="seleccione--actividad" id="start">
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 1 - Es la ética una teoría que trata los pensamientos humanos</strong></span>
+            </div>
+        
+            <div class="contenido--actividad" id="0">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(0)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 1-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <!--CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+        <div class="seleccione--actividad"  >
+            <div class="pregunta--actividad">
+                <span><strong>Actividad # 2 - Es la ética una ciencia social que estudia el comportamiento humano.</strong></span>
+            </div>
+        
+            <div class="contenido--actividad" id="1">
+            
+                <!--OPCIONES-->
+            
+                <div class="btns--actividad">
+                        <button class="btn--actividad btn---verificar" onclick="mostrar(1)">Realizar actividad</button>
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR ACTIVIDAD FORMATIVA 2-->
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+        <!-- SORTABLE - PARA MOVER LOS OBJETOS -->
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+        <!--Modal-->
+        <div class="modal">
+            <div class="modal_content animate__animated">
+                <header class="modal_header">
+                    <span class="titulo_modal">
+    
+                        <!-- TITULO MODAL -->
+                        
+                    </span>
+                    <button class="cerrarBtn_modal"><span class="material-icons-outlined">cancel</span></button>
+                </header>
+                <div class="modal_helpText">
+    
+                    <!--DESCRIPCIÓN MODAL-->
+    
+                </div>
+            </div>
+        </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>
